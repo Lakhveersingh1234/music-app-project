@@ -38,16 +38,16 @@
                 </div>
                 <div class="volume">
                     <div class="volicon">
-                        <img src="volume.png" alt="">
+                        <img src="volume.png" alt="" id="volumesvg">
                         </div>
-                        <input type="range" id="vol-range">
+                        <input type="range"  id="vol-range" onchange="volume()">
                 </div>
             </div>
             <div class="right">
                 <div class="rightdiv">
                     <h2 id="songname">GOAT</h2>
                     <h3 id="singername">Daljit Dosanjh</h3>
-                    <input type="range" id="rightvol-range">
+                    <input type="range" class="vol-range" id="vol-range" onchange="duration()" >
                
                 <div class="control">
                     <div class="rewind">
