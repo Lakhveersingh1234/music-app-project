@@ -2,7 +2,7 @@ let songname=document.querySelector("#songname");
 let singername=document.querySelector("#singername");
 let songimage=document.querySelector(".img");
 let playpause=document.querySelector("#play-pause");
-let index=1;
+let index=0;
 let playingsong=false;
 let track=document.createElement("audio")
 let songs=[
@@ -54,4 +54,30 @@ function pauseSong(){
     track.pause();
     playingsong=false;
     playpause.src="play.png";
+}
+function nextsong(){
+    if(index<songs.length-1){
+        index++;
+        loadtrack(index)
+        playSong()
+    }
+    else{
+        index=-1;
+        loadtrack()
+        playSong()
+
+    }
+}
+function previous(){
+    if(index>0){
+        index--;
+        loadtrack(index)
+        playSong()
+    }
+    else{
+        index=songs.length-0;
+        loadtrack()
+        playSong()
+
+    }
 }
