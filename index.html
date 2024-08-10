@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="music.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="section1">
+        <div class="nav">
+            <div class="box1">
+                <img class="navimg" src="playlist.svg" alt="">
+            </div>
+            <div class="box2">
+                <h1>FEEL THE MUSIC</h1>
+            </div>
+            <div class="box3">
+                <img class="navimg" src="music.png" alt="">
+            </div>
+
+
+
+            <div class="clear"></div>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="box">
+            <div class="left">
+                <div class="image">
+                <div class="img">
+                 
+                </div>
+                </div>
+                <div class="volume">
+                    <div class="volicon">
+                        <img src="volume.png" alt="">
+                        </div>
+                        <input type="range" id="vol-range">
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightdiv">
+                    <h2 id="songname">GOAT</h2>
+                    <h3 id="singername">Daljit Dosanjh</h3>
+                    <input type="range" id="rightvol-range">
+               
+                <div class="control">
+                    <div class="rewind">
+                        <img src="rewind.png" alt="" onclick="previous()">
+
+                    </div>
+                    <div class="play">
+                        <img src="play.png" alt="play" id="play-pause" onclick="playPause()">
+                    </div>
+                    <div class="next">
+                        <img src="next.png" alt="next" id="nextimg" onclick="nextsong()">
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+
+<script src="song.js"></script>
+</body>
+
+</html>
