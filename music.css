@@ -68,8 +68,10 @@ h3{
     background-image: url("img1.jpeg");
     background-size:cover;
     background-color: transparent;
-    box-shadow: 2px 2px 10px rgb(93,92,92,0.9),-2px -2px 10px rgb(0,0,0,0.9),-2px 2px 10px rgb(0,0,0,0.9);
-    
+    box-shadow: 2px 2px 10px rgb(93,92,92,0.9),-2px -2px 10px rgb(0,0,0,0.9),-2px 2px 10px rgb(0,0,0,0.9);   
+}
+.rotating{
+    animation: rotate 20s linear infinite;
 }
 .volume{
     position: relative;
@@ -171,6 +173,7 @@ h3{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+
 }
 .next{
     width: 50px;
@@ -182,5 +185,14 @@ h3{
     justify-content: center;
     border-radius: 50%;
 }
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 
 

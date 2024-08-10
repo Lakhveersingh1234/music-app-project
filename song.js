@@ -5,6 +5,7 @@ let playpause=document.querySelector("#play-pause");
 let volumecontrol=document.querySelector('#vol-range');
 let songRange=document.querySelector('.vol-range');
 let volumemute=document.querySelector('#volumesvg');
+let play=document.querySelector('#play');
 
 let index=0;
 let playingsong=false;
@@ -48,10 +49,13 @@ loadtrack(index);
 function playPause(){
     if(playingsong==false){
         playSong();
+        songimage.classList.add('rotating')
+
 
     }
     else{
         pauseSong();
+        songimage.classList.remove('rotating')
     }
 }
 
@@ -59,6 +63,7 @@ function playSong(){
     track.play();
     playingsong=true;
     playpause.src="pause.png";
+    play=true
 
 }
 
@@ -66,6 +71,7 @@ function pauseSong(){
     track.pause();
     playingsong=false;
     playpause.src="play.png";
+
 }
 function nextsong(){
     if(index<songs.length-1){
