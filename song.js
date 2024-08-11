@@ -31,10 +31,10 @@ let songs=[
    path:"song3.mp3",
     },
     {
-   name:"tere vaste",
-   singername:"satinder Sartaj",
-   image:"img3.jpeg",
-   path:"sidhu1.mp3",
+   name:"Jatt di akal",
+   singername:"Ranjit Bawa",
+   image:"ranjit.jpeg",
+   path:"ranjit bawa/Jatt Di Akal.mp3",
     },
     {
    name:"tere vaste",
@@ -142,9 +142,7 @@ function volume(){
 }
 function duration(){
     track.currentTime=songRange.value;
-    if(duration==true){
-        
-    }
+
 }
 loadtrack(index);
  
