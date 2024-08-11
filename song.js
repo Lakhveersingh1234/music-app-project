@@ -37,6 +37,12 @@ let songs=[
    path:"ranjit bawa/Jatt Di Akal.mp3",
     },
     {
+   name:"Jatt di akal",
+   singername:"Ranjit Bawa",
+   image:"ranjit.jpeg",
+   path:"ranjit bawa/Mela Vekhan Aayi.mp3",
+    },
+    {
    name:"tere vaste",
    singername:"satinder Sartaj",
    image:"img3.jpeg",
