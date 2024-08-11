@@ -6,9 +6,10 @@ let volumecontrol=document.querySelector('#vol-range');
 let songRange=document.querySelector('.vol-range');
 let volumemute=document.querySelector('#volumesvg');
 let play=document.querySelector('#play');
-
+let loopButton = document.querySelector('#loop');
 let index=0;
 let playingsong=false;
+let isLooping = false;
 let track=document.createElement("audio")
 let songs=[
     {
@@ -29,7 +30,21 @@ let songs=[
    image:"img3.jpeg",
    path:"song3.mp3",
     },
+    {
+   name:"tere vaste",
+   singername:"satinder Sartaj",
+   image:"img3.jpeg",
+   path:"sidhu1.mp3",
+    },
+    {
+   name:"tere vaste",
+   singername:"satinder Sartaj",
+   image:"img3.jpeg",
+   path:"sidhu2.mp3",
+    },
 ]
+
+
 function loadtrack(index){
    track.src=songs[index].path;
    songname.innerHTML=songs[index].name;
@@ -42,22 +57,36 @@ function loadtrack(index){
     songRange.value=track.currentTime
    },1000)
    track.load()
+   track.play()
+   
 
 }
 loadtrack(index);
 
+
 function playPause(){
     if(playingsong==false){
-        playSong();
-        songimage.classList.add('rotating')
-
-
-    }
+         playSong();
+         songimage.classList.add('rotating')
+}
     else{
         pauseSong();
         songimage.classList.remove('rotating')
     }
+
+  
 }
+track.addEventListener('ended', () => {
+    if (isLooping) {
+        // Restart the song if looping is enabled
+        track.currentTime = 0;
+        playpause.src="pause.png";
+        track.play();
+        
+    } else {
+        nextsong();
+    }
+});
 
 function playSong(){
     track.play();
@@ -78,6 +107,7 @@ function nextsong(){
         index++;
         loadtrack(index)
         playSong()
+        songimage.classList.add('rotating')
     }
     else{
         index=-1;
@@ -86,11 +116,13 @@ function nextsong(){
 
     }
 }
+
 function previous(){
     if(index>0){
         index--;
         loadtrack(index)
         playSong()
+        songimage.classList.add('rotating')
     }
     else{
         index=songs.length-0;
@@ -110,4 +142,9 @@ function volume(){
 }
 function duration(){
     track.currentTime=songRange.value;
+    if(duration==true){
+        
+    }
 }
+loadtrack(index);
+ 
