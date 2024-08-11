@@ -53,7 +53,7 @@ let songs=[
 
 function loadtrack(index){
    track.src=songs[index].path;
-   songname.innerHTML=songs[index].name;
+   songname.innerHTML=songs[index].name;;
    singername.innerHTML=songs[index].singername;
    songimage.style=`background-image: url("${songs[index].image}");`
    volume()
@@ -86,7 +86,6 @@ track.addEventListener('ended', () => {
     if (isLooping) {
         // Restart the song if looping is enabled
         track.currentTime = 0;
-        playpause.src="pause.png";
         track.play();
         
     } else {
